@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const InputField = () => {
-	return (
-		<div>
+const InputField = ({ text, handleInput, handleSubmit }) => {
+  return (
+    <label>
+      <input value={text} onChange={(e) => handleInput(e.target.value)} />
+      <button onClick={handleSubmit}>Add Todo</button>
+    </label>
+  );
+};
 
-		</div>
-	)
-}
-
-export default InputField
+export default InputField;
